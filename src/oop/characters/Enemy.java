@@ -1,7 +1,5 @@
 package oop.characters;
 
-import oop.characters.Character;
-
 public class Enemy extends Character {
 
     public Enemy(int hp, int attackDamage) {
@@ -17,4 +15,18 @@ public class Enemy extends Character {
         System.out.println("Used Special Attack for " + spAttackDamage + " damage");
     }
 
+    @Override
+    public void defend() {
+
+    }
+
+    @Override
+    public void spDefend() {
+
+    }
+
+    @Override
+    public int roll() {
+        return 0;
+    }
 }

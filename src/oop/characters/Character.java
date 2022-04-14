@@ -1,6 +1,6 @@
 package oop.characters;
 
-public abstract class Character implements Attackable {
+public abstract class Character implements Attackable, Defendable, Rollable {
 
     //    PROPERTIES ALL CHARACTERS SHARE
     protected int hp;
@@ -36,5 +36,7 @@ public abstract class Character implements Attackable {
             System.out.println("Attacked for " + baseAttackDamage + " damage");
         }
     }
+
+
 
 }

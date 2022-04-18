@@ -4,8 +4,8 @@ public class Hero extends Character {
 
     private String name;
 
-    public Hero(int hp, int attackDamage, String name) {
-        super(hp, attackDamage);
+    public Hero(int hp, int attackDamage, String name, int defense) {
+        super(hp, attackDamage, defense);
         this.name = name;
     }
 

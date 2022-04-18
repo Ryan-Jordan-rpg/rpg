@@ -4,11 +4,13 @@ public abstract class Character implements Attackable, Defendable, Rollable {
 
     //    PROPERTIES ALL CHARACTERS SHARE
     protected int hp;
+    protected int defense;
     protected int attackDamage = 0;
     protected int spAttackDamage = 20;
 
-    public Character(int hp, int attackDamage) {
+    public Character(int hp, int attackDamage, int defense) {
         this.hp = hp;
+        this.defense = defense;
         this.attackDamage = attackDamage;
     }
 
@@ -37,6 +39,26 @@ public abstract class Character implements Attackable, Defendable, Rollable {
         }
     }
 
+    public void defend() {
 
+        if (!compare()) {
+            System.out.println("Attack miss");
+        } else {
+            System.out.println("Attacked for " + (attackDamage - defense) + " damage");
+        }
+    }
 
+    public int roll() {
+        return (int) Math.floor(Math.random() * 30 + 1);
+    }
+
+    public boolean compare() {
+        int attackRoll = roll();
+        int defenseRoll = roll();
+        if (attackRoll > defenseRoll) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

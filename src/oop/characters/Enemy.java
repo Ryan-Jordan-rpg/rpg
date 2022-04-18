@@ -2,8 +2,8 @@ package oop.characters;
 
 public class Enemy extends Character {
 
-    public Enemy(int hp, int attackDamage) {
-        super(hp, attackDamage);
+    public Enemy(int hp, int attackDamage, int defense) {
+        super(hp, attackDamage, defense);
     }
 
     @Override

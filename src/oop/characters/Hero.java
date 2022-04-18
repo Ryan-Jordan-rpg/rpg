@@ -17,8 +17,9 @@ public class Hero extends Character {
         this.name = name;
     }
 
-    public void spAttack() {
+    public int spAttack() {
         System.out.println("Used Special Attack for " + spAttackDamage + " damage");
+        return spAttackDamage;
     }
 
     @Override

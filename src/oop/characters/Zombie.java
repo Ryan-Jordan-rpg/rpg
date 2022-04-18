@@ -19,10 +19,10 @@ public class Zombie extends Enemy {
         isRotting = rotting;
     }
 
-    @Override
-    public void attack() {
-        System.out.println("Eating brains!");
-    }
+//    @Override
+//    public void attack() {
+//        System.out.println("Eating brains!");
+//    }
 
 
 

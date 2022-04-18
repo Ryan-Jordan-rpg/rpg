@@ -7,12 +7,14 @@ public class Enemy extends Character {
     }
 
     @Override
-    public void attack() {
-        System.out.println("Enemy Attack!");
-    }
+    // public int attack() {
+        // System.out.println("Enemy Attack!");
+    // }
 
-    public void spAttack() {
+
+    public int spAttack() {
         System.out.println("Used Special Attack for " + spAttackDamage + " damage");
+        return spAttackDamage;
     }
 
 

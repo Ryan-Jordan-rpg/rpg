@@ -41,11 +41,13 @@ public abstract class Character implements Attackable, Defendable, Rollable {
     }
 
     //    BEHAVIORS THAT ALL CHARACTERS SHARE
-    public void attack() {
+    public int attack() {
         if (attackDamage > baseAttackDamage) {
             System.out.println("Attacked for " + attackDamage + " damage");
+            return attackDamage;
         } else {
             System.out.println("Attacked for " + baseAttackDamage + " damage");
+            return baseAttackDamage;
         }
     }
 

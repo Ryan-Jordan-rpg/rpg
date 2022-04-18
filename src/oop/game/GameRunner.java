@@ -29,7 +29,9 @@ public class GameRunner {
         hero.attack();
         hero.setAttacker(true);
         enemy.defend();
-         GamePlay.turn(hero, enemy);
+         do {
+             GamePlay.turn(hero, enemy);
+         } while (hero.getHp() > 0 && enemy.getHp() > 0);
 //        int heroRoll = RollHelper.getRoll();
 //        int enemyRoll = RollHelper.getRoll();
 //

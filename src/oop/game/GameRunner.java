@@ -4,6 +4,7 @@ package oop.game;
 import oop.characters.*;
 import oop.characters.Character;
 import util.Input;
+import util.RollHelper;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -13,8 +14,8 @@ public class GameRunner {
     public static void main(String[] args) {
         String heroChoice = Input.getString("Welcome! Please select a hero(Warrior/Knight): ");
 
-        Attackable hero;
-        Defendable enemy;
+        Character hero;
+        Character enemy= new Zombie();
 
 
         if (heroChoice.equalsIgnoreCase("warrior")) {
@@ -26,10 +27,17 @@ public class GameRunner {
         }
 
         hero.attack();
-
-        enemy = new Zombie();
+        hero.setAttacker(true);
         enemy.defend();
-
+         GamePlay.turn(hero, enemy);
+//        int heroRoll = RollHelper.getRoll();
+//        int enemyRoll = RollHelper.getRoll();
+//
+//        if (RollHelper.isHigherRoll(heroRoll, enemyRoll)){
+//            hero.attack();
+//        }
+//        hero.setAttacker(!hero.isAttacker());
+//        enemy.setAttacker(!enemy.isAttacker());
 
     }
 
@@ -56,11 +64,6 @@ public class GameRunner {
 //        Enemy enemyToAttack = enemies[randomIndex];
 //
 //        System.out.println(enemyToAttack.getClass().getName());
-//
-//
-//
-//
-//
 //    }
 
 

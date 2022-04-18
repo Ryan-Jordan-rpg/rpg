@@ -21,17 +21,17 @@ public class Enemy extends Character {
 
     }
 
-    @Override
-    public void defend() {
-
-        if (!compare()) {
-            System.out.println("Attack miss");
-        } else {
-            int damageTaken =( Hero.baseAttackDamage - this.defense);
-            System.out.println("Attacked for " + damageTaken + " damage");
-            this.hp -= damageTaken;
-            System.out.println(this.hp);
-        }
-    }
+//    @Override
+//    public void defend() {
+//
+//        if (!compare()) {
+//            System.out.println("Attack miss");
+//        } else {
+//            int damageTaken =( Hero.baseAttackDamage - this.defense);
+//            System.out.println("Attacked for " + damageTaken + " damage");
+//            this.hp -= damageTaken;
+//            System.out.println(this.hp);
+//        }
+//    }
 
 }

@@ -7,6 +7,8 @@ public abstract class Character implements Attackable, Defendable, Rollable {
     protected int defense;
     protected int attackDamage = 0;
     protected int spAttackDamage = 20;
+    protected  int spcDefence = 20;
+    protected boolean isAttacker;
 
     public Character(int hp, int attackDamage, int defense) {
         this.hp = hp;
@@ -30,6 +32,14 @@ public abstract class Character implements Attackable, Defendable, Rollable {
         this.attackDamage = attackDamage;
     }
 
+    public boolean isAttacker() {
+        return isAttacker;
+    }
+
+    public void setAttacker(boolean attacker) {
+        isAttacker = attacker;
+    }
+
     //    BEHAVIORS THAT ALL CHARACTERS SHARE
     public void attack() {
         if (attackDamage > baseAttackDamage) {
@@ -40,16 +50,20 @@ public abstract class Character implements Attackable, Defendable, Rollable {
     }
 
     public void defend() {
-
-        if (!compare()) {
-            System.out.println("Attack miss");
-        } else {
-            int damageTaken =( attackDamage - this.defense);
-            System.out.println("Attacked for " + damageTaken + " damage");
-            this.hp -= damageTaken;
-            System.out.println(this.hp);
-        }
+        System.out.println("Defend " + baseDefense+ " against attack");
+//        if (!compare()) {
+//            System.out.println("Attack miss");
+//        } else {
+//            int damageTaken =( attackDamage - this.defense);
+//            System.out.println("Attacked for " + damageTaken + " damage");
+//            this.hp -= damageTaken;
+//            System.out.println(this.hp);
+//        }
     }
+
+    public  void spDefend(){
+        System.out.println("Defend " + spcDefence+ " against attack");
+    };
 
     public int roll() {
         int roll = (int) Math.floor(Math.random() * 30 + 1);

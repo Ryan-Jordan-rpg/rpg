@@ -44,17 +44,23 @@ public abstract class Character implements Attackable, Defendable, Rollable {
         if (!compare()) {
             System.out.println("Attack miss");
         } else {
-            System.out.println("Attacked for " + (attackDamage - defense) + " damage");
+            int damageTaken =( attackDamage - this.defense);
+            System.out.println("Attacked for " + damageTaken + " damage");
+            this.hp -= damageTaken;
+            System.out.println(this.hp);
         }
     }
 
     public int roll() {
-        return (int) Math.floor(Math.random() * 30 + 1);
+        int roll = (int) Math.floor(Math.random() * 30 + 1);
+
+        return roll;
     }
 
     public boolean compare() {
         int attackRoll = roll();
         int defenseRoll = roll();
+//        System.out.println( attackRoll+" " +defenseRoll);
         if (attackRoll > defenseRoll) {
             return true;
         } else {

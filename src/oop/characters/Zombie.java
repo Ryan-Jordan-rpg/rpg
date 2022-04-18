@@ -7,7 +7,7 @@ public class Zombie extends Enemy {
     private boolean isRotting;
 
     public Zombie() {
-        super(100, 15);
+        super(100, 15, 10);
         this.isRotting = true;
     }
 

@@ -17,22 +17,13 @@ public class Hero extends Character {
         this.name = name;
     }
 
-    public void spAttack(){
+    public void spAttack() {
         System.out.println("Used Special Attack for " + spAttackDamage + " damage");
-    }
-
-    @Override
-    public void defend() {
-        System.out.println("You defend the enemy damage");
     }
 
     @Override
     public void spDefend() {
 
     }
-
-    @Override
-    public int roll() {
-        return 0;
-    }
 }
+
